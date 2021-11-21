@@ -6,9 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.roomhomeworkdefaultrepo.databinding.ActivityMainBinding
 
-class Adapter(val data : ArrayList<User>, private val onClick : (data : User, position : Int)->Unit) : RecyclerView.Adapter<Adapter.ViewHolder>(){
+class Adapter(val data: ArrayList<User>, private val onClick: (data : User, position : Int)-> Unit) : RecyclerView.Adapter<Adapter.ViewHolder>(){
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         val name = itemView.findViewById<TextView>(R.id.name_tv)

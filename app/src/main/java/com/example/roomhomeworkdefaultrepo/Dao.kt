@@ -23,7 +23,4 @@ interface Dao {
 
     @Delete
     fun deleteData(user : User)
-
-    @Update
-    fun updateData(user: User)
 }
