@@ -7,34 +7,43 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/titleEditText"
+        android:id="@+id/nameEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="타이틀 입력"
+        android:hint="이름 입력"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/contentEditText"
+        android:id="@+id/birthdayEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="내용 입력"
-        app:layout_constraintTop_toBottomOf="@+id/titleEditText" />
+        android:hint="생일 입력"
+        app:layout_constraintTop_toBottomOf="@+id/nameEditText" />
+
+    <EditText
+        android:id="@+id/emailEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="이메일 입력"
+        app:layout_constraintTop_toBottomOf="@+id/birthdayEditText" />
 
     <Button
         android:id="@+id/saveDataButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="저장"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/contentEditText" />
+        app:layout_constraintTop_toBottomOf="@+id/emailEditText" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/memoRecycler"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        tools:listitem="@layout/item"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/saveDataButton" />
